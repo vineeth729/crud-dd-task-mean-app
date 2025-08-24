@@ -23,6 +23,8 @@ services:
       - mongo
     networks:
       - app-net
+    ports:
+      - "3000:3000" 
 
   frontend:
     image: vineeth837/mean-frontend:latest
