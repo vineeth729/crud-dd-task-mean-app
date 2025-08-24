@@ -6,13 +6,11 @@ services:
     container_name: mongo
     restart: unless-stopped
     environment:
-      MONGO_INITDB_DATABASE: appdb
+      MONGO_INITDB_DATABASE: dd_db
     volumes:
       - mongo_data:/data/db
-    ports:
-      # expose only if you need to inspect from host; otherwise remove this line
-      - "27017:27017"
-    networks: [app-net]
+    networks:
+      - app-net
 
   backend:
     image: vineeth837/mean-backend:latest
@@ -20,13 +18,11 @@ services:
     restart: unless-stopped
     environment:
       PORT: "3000"
-      MONGO_URI: "mongodb://mongo:27017/appdb"
-      # add any other required env vars here
+      MONGO_URI: "mongodb://mongo:27017/dd_db"
     depends_on:
       - mongo
-    expose:
-      - "3000"
-    networks: [app-net]
+    networks:
+      - app-net
 
   frontend:
     image: vineeth837/mean-frontend:latest
@@ -34,12 +30,11 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
-    expose:
-      - "80"
-    networks: [app-net]
+    networks:
+      - app-net
 
-  # Reverse proxy that binds to host:80 and routes to frontend and backend
-  nginx:
+  # Optional external reverse proxy — only needed if you want a separate proxy container.
+  proxy:
     image: nginx:alpine
     container_name: proxy
     restart: unless-stopped
@@ -50,7 +45,8 @@ services:
     depends_on:
       - frontend
       - backend
-    networks: [app-net]
+    networks:
+      - app-net
 
 volumes:
   mongo_data:
