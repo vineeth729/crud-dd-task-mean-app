@@ -4,18 +4,6 @@ This repository contains a **MEAN (MongoDB, Express, Angular, Node.js)** CRUD ap
 
 ---
 
-## Table of Contents
-
-1. [Project Overview](#project-overview)  
-2. [Repository Setup](#repository-setup)  
-3. [Deployment on Ubuntu VM](#deployment-on-ubuntu-vm)  
-4. [Docker Compose Configuration](#docker-compose-configuration)  
-5. [Nginx Reverse Proxy](#nginx-reverse-proxy)  
-6. [CI/CD Pipeline](#cicd-pipeline)  
-7. [Screenshots](#screenshots)  
-
----
-
 ## Project Overview
 
 The application includes:
