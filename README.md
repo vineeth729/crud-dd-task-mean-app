@@ -28,16 +28,11 @@ The application includes:
 
 ## Repository Setup
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/vineeth729/crud-dd-task-mean-app.git
-cd crud-dd-task-mean-app
-
-```
+1. Download the zip file and create a new repository and make Dockerfile for Backend, Frontend and add docker-compose file, Nginx configuration, Jenkinsfile.
+   
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5d279303-d292-4cc1-b785-9e5580f6bea0" />
 
-2. Docker image build process.
+3. Docker image build process.
 Backend:
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1505def1-e808-46f2-ab16-1df0b78e54dc" />
