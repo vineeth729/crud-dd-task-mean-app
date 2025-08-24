@@ -35,7 +35,7 @@ services:
     networks:
       - app-net
 
-  # Optional external reverse proxy — only needed if you want a separate proxy container.
+
   proxy:
     image: nginx:alpine
     container_name: proxy
