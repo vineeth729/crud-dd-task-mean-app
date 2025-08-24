@@ -8,4 +8,4 @@ RUN npm install --omit=dev
 COPY . .
 ENV PORT=3000
 EXPOSE 3000
-CMD ["node", "server.js"]   # replace with your entry file if different
+CMD ["node", "server.js"]  
