@@ -16,7 +16,15 @@ The application includes:
 
 ---
 
-
+## Workflow
+1. Developer pushes changes to **GitHub repository**.
+2. Jenkins pipeline detects changes and triggers:
+   - Docker image build for frontend and backend.
+   - Push images to **Docker Hub**.
+3. Ubuntu VM (EC2 or other cloud VM) pulls latest images.
+4. Docker Compose brings up all services on the VM.
+5. Nginx serves the frontend and proxies API requests to backend.
+6. MongoDB stores application data and is linked to the backend container.
 
 ## Repository Setup
 
