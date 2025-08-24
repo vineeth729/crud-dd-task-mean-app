@@ -15,7 +15,7 @@ services:
     networks: [app-net]
 
   backend:
-    image: dockerhub_username/mean-backend:latest
+    image: vineeth837/mean-backend:latest
     container_name: backend
     restart: unless-stopped
     environment:
@@ -29,7 +29,7 @@ services:
     networks: [app-net]
 
   frontend:
-    image: dockerhub_username/mean-frontend:latest
+    image: vineeth837/mean-frontend:latest
     container_name: frontend
     restart: unless-stopped
     depends_on:
