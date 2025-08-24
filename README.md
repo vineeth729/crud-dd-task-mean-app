@@ -29,6 +29,9 @@ The application includes:
 ## Repository Setup
 
 1. Download the zip file and create a new repository and make Dockerfile for Backend, Frontend and add docker-compose file, Nginx configuration, Jenkinsfile.
+
+<img width="1858" height="1048" alt="image" src="https://github.com/user-attachments/assets/5bdc1625-3986-415c-aab2-d3b5bb25f627" />
+
    
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5d279303-d292-4cc1-b785-9e5580f6bea0" />
 
