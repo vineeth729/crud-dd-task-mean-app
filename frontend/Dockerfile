@@ -15,7 +15,7 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy Angular dist files
 COPY --from=build /app/dist/angular-15-crud /usr/share/nginx/html
 
-# Copy custom nginx config (optional but recommended for Angular routing)
+# Copy custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
